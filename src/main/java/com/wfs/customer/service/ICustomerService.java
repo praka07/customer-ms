@@ -7,13 +7,15 @@ import org.springframework.stereotype.Service;
 import com.wfs.customer.dao.ICustomerDAO;
 import com.wfs.customer.model.Customer;
 
+import java.util.List;
+
 @Service
 public class ICustomerService implements CustomerService {
 
 	@Autowired
 	ICustomerDAO daoObj;
 	@Override
-	public ResponseEntity<?> getAllCustomer() {
+	public List<Customer> getAllCustomer() {
 		return daoObj.getAllCustomer();
 	}
 	@Override

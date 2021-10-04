@@ -4,9 +4,11 @@ import org.springframework.http.ResponseEntity;
 
 import com.wfs.customer.model.Customer;
 
+import java.util.List;
+
 public interface CustomerService {
 
-	ResponseEntity<?> getAllCustomer();
+	List<Customer> getAllCustomer();
 
 	Customer getCustomerById(int id);
 

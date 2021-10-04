@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wfs.customer.model.Customer;
 import com.wfs.customer.service.ICustomerService;
 
+import java.util.List;
+
 
 @RestController
 public class CustomerRestController {
@@ -15,7 +17,7 @@ public class CustomerRestController {
 	ICustomerService serviceObj;
 	
 	@GetMapping("/allcustomer")
-	public ResponseEntity<?> getAllCustomers(){
+	public List<Customer> getAllCustomers(){
 		return serviceObj.getAllCustomer();
 		
 	}
