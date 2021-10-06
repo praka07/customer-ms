@@ -1,5 +1,6 @@
 package com.wfs.customer.service;
 
+import com.wfs.customer.model.ClosedAccountProduct;
 import org.springframework.http.ResponseEntity;
 
 import com.wfs.customer.model.Customer;
@@ -8,8 +9,9 @@ import java.util.List;
 
 public interface CustomerService {
 
-	List<Customer> getAllCustomer();
+	List<ClosedAccountProduct> getAllCustomer();
 
-	Customer getCustomerById(int id);
+	ClosedAccountProduct getCustomerById(int id);
 
+	ResponseEntity<?> addCustomer(ClosedAccountProduct requestClosedAccountProduct);
 }
